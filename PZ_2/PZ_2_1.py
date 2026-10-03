@@ -8,28 +8,28 @@ while True:
         v1  = float(input('V1='))
         break
     except ValueError:
-        print("Неправильно ввели! Нужно число.")
+        print('Неправильно ввели! Нужно число.')
 
 while True:
     try:
         v2  = float(input('V2='))
         break
     except ValueError:
-        print("Неправильно ввели! Нужно число.")
+        print('Неправильно ввели! Нужно число.')
 
 while True:
     try:
         s1 = float(input('S начальное='))
         break
     except ValueError:
-        print("Неправильно ввели! Нужно число.")
+        print('Неправильно ввели! Нужно число.')
 
 while True:
     try:
         t = float(input('T='))
         break
     except ValueError:
-        print("Неправильно ввели! Нужно число.")
+        print('Неправильно ввели! Нужно число.')
 
 
 print(f'Расстояние между автобилями за {t} часа: {s1 + (t * (v1+v2))}')

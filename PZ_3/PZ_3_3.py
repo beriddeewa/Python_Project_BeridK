@@ -1,4 +1,4 @@
-
+#.
 a = input('Введите число А: ')
 
 while type(a) != int:

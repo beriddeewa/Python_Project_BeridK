@@ -2,7 +2,7 @@
 # Составить программу, определяющую название цвета в зависимости от введенной длины волны
 n = input('Введите число: ')
 
-while type(n) != int or (type(n) == int and n <= 0):
+while type(n) != int:
     try:
         x = int(n)
         if x > 0:
@@ -32,3 +32,4 @@ else:
     color = 'Красный'
 
 print(color)
+

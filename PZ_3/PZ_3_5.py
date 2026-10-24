@@ -1,21 +1,26 @@
 # Ввести двухзначное число. 
 # Если сумма цифр числа четная, то увеличить число на 2, в противном случае уменьшить на 2.
 
-n = input('Введите двухзначное число: ')
-
-while type(n) != int:
+while True:
+    n = input('Введите двухзначное число: ')
     try:
-        n = int(n)
+        chislo = int(n)
+        
+        if 10 <= chislo <= 99:
+            break
+        else:
+            print('Число должно быть строго двухзначным!')
+            
     except ValueError:
-        print('Неправильно ввели число!')
-        n = input('Введите двухзначное число: ')
+        print('Неправильно ввели число! Пожалуйста, используйте цифры.')
+        
+sum = (chislo // 10) + (chislo % 10)
 
-# Находим сумму цифр двузначного числа
-sum_digits = (n // 10) + (n % 10)
+if sum % 2 == 0:
+    chislo = chislo + 2
+else:
+    chislo = chislo - 2
+    
+print(chislo)
 
-if sum_digits % 2 == 0:
-    n = int(n + 2)
-elif sum_digits % 2 != 0:
-    n = int(n - 2)
 
-print(n)

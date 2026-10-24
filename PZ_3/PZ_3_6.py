@@ -12,7 +12,7 @@ while type(n) != int:
 
 if n >= 0:
     n = n + 20
-elif n < 0:
+else:
     n = n - 5
 
 print(n)

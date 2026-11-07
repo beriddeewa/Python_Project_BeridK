@@ -7,10 +7,13 @@ n = int(input('Сколько элементов прогрессии прове
 kol = 0
 tekushiy = a1
 
-for i in range(n):
+i = 0
+
+while i < n:
     if 10 < tekushiy < 30:
         kol += 1
-    
-    tekushiy += d  
+        
+    tekushiy += d
+    i = i + 1
 
 print(f'Количество элементов между 10 и 30: {kol}')

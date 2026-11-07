@@ -10,8 +10,10 @@ print(f2)
 
 kol_chet = 0
 
-for i in range(N - 2):
-    f_next = f1 + f2  
+i = 0
+
+while i < N - 2:
+    f_next = f1 + f2
     print(f_next)
     
     if f_next % 2 == 0:
@@ -19,5 +21,7 @@ for i in range(N - 2):
         
     f1 = f2
     f2 = f_next
+    
+    i = i + 1
 
 print(f'Количество чётных чисел Фибоначчи: {kol_chet}')

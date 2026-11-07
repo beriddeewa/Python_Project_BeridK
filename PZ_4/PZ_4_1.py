@@ -2,15 +2,17 @@
 
 price = input('Введите цену за 1 кг конфет: ')
 
-while type(price) != int:
+while type(price) != float:
     try:
-        price = int(price)
+        price = float(price)
     except ValueError:
             print('Неправильно ввели число!')
             price = input('Введите цену за 1 кг конфет: ')
-
-for i in range(1, 11):
+i = 1
+while i <= 10: 
      m = i / 10
      cost = m * price
      
      print(f'Стоимость {m:.1f} кг конфет: {cost:.2f} руб.')
+
+     i = i + 1 

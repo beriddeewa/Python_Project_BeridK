@@ -4,10 +4,10 @@
 
 s = input("Введите строку: ")
 
-even_chars = s[1::2]
+even = s[1::2]
 
-odd_chars_reversed = s[::2][::-1]
+odd = s[::2][::-1]
 
-encrypted = even_chars + odd_chars_reversed
+res = even + odd
 
-print(encrypted)
+print(res)

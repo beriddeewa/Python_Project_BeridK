@@ -2,19 +2,20 @@
 # Переставить в обратном порядке элементы списка,
 # расположенные между его минимальным и максимальным элементами, включая минимальный и максимальный элементы.
 
-N = int(input('N = '))
-lst = []
+import random   
+n = int(input())
 
-for i in range(N):
-    x = int(input('Введите элимент списка: '))
-    lst.append(x)
+l = []
 
-i_min = lst.index(min(lst))
-i_max = lst.index(max(lst))
+for i in range(n):
+    l.append(random.randint(1, 100))
+print(l)
 
-left = min(i_min, i_max)
-right = max(i_min, i_max)
+idx1 = l.index(min(l))
+idx2 = l.index(max(l))
 
-lst[left : right + 1] = lst[left : right + 1][::-1]
+minn = min(idx1, idx2)
+maxx = max(idx1, idx2)
 
-print(lst)
+l[minn + 1 : maxx] = l[minn + 1 : maxx][::-1]
+print(l)

@@ -1,23 +1,17 @@
 # Дан список размера N. Найти номер его последнего локального максимума
 # (локальный максимум — это элемент, который больше любого из своих соседей).
 
-N = int(input('N = '))
-lst = []
+import random   
+n = int(input())
 
-for i in range(N):
-    x = int(input('Введите элимент списка: '))
-    lst.append(x)
+l = []
 
-ans = 0  
+for i in range(n):
+    l.append(random.randint(1, 50))
+print(l)
 
-if lst[0] > lst[1]:
-    ans = 0
+for i in range(len(l) - 2, 0, -1):
+    if l[i -1] < l[i] > l[i + 1]:
+        print(i + 1)
+        break
 
-for i in range(1, N - 1):
-    if lst[i] > lst[i - 1] and lst[i] > lst[i + 1]:
-        ans = i
-
-if lst[N - 1] > lst[N - 2]:
-    ans = N - 1
-
-print(ans)
